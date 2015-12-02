@@ -13,6 +13,18 @@ public class Main {
         return -1;
     }
 
+    public static int betterWay(int[] array) {
+        boolean[] imnotmissing = new boolean[array.length];
+        for (int n : array) {
+            imnotmissing[n - 1] = true;
+        }
+        for (int i = 0; i < imnotmissing.length; i++) {
+            if (!imnotmissing[i])
+                return i+1;
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
 	// write your code here
     }
